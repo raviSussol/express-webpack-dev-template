@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint": "eslint ./ --ext=\".js,.jsx\" --ignore-pattern build --ignore-pattern __tests__/ --ignore-pattern __mocks__/ --ignore-pattern node_modules/",
+    "lint": "eslint ./ --ext=\".js,.jsx\" --ignore-pattern build --ignore-pattern __tests__/ --ignore-pattern __mocks__/ --ignore-pattern node_modules/"
   },
   "keywords": [],
   "author": "",
@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "es6-promise": "^4.2.4",
+    "express": "^4.16.2",
     "normalize.css": "^8.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
