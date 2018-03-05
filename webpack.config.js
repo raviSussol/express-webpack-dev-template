@@ -2,7 +2,7 @@ import path from 'path';
 import webpack, { HotModuleReplacementPlugin } from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const { CommonsChunkPlugin } = webpack.optimize;
+const { SplitChunksPlugin } = webpack.optimize;
 
 const env = process.env.NODE_ENV || 'developement';
 const isProd = process.env.NODE_ENV === 'production';
@@ -52,7 +52,7 @@ module.exports = {
     filename: '[name].js',
   },
   plugins: [
-    new CommonsChunkPlugin({
+    new SplitChunksPlugin({
       name: 'commons',
       // the commons chunk name
       filename: 'commons.js',

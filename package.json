@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "start": "babel-node --presets env server/server.js",
     "lint": "eslint ./ --ext=\".js,.jsx\" --ignore-pattern build --ignore-pattern __tests__/ --ignore-pattern __mocks__/ --ignore-pattern node_modules/"
   },
   "keywords": [],
