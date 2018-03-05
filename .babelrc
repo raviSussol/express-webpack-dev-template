@@ -1,0 +1,20 @@
+{
+  "presets": [
+    // disable babel's module plugin
+    // https://webpack.js.org/guides/hmr-react/#babel-config
+    ["env", {"modules": false}],
+
+    "react",
+    "stage-0"
+  ],
+  "plugins": [
+    // Enables React code to work with HMR.
+    "react-hot-loader/babel"
+  ],
+  "env": {
+    "test": {
+      // https://facebook.github.io/jest/docs/en/webpack.html#using-with-webpack-2
+      "plugins": ["dynamic-import-node"]
+    }
+  }
+}
