@@ -4,7 +4,8 @@
   "description": "An application with Express and Webpack dev tools configured",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "lint": "eslint ./ --ext=\".js,.jsx\" --ignore-pattern build --ignore-pattern __tests__/ --ignore-pattern __mocks__/ --ignore-pattern node_modules/",
   },
   "keywords": [],
   "author": "",
