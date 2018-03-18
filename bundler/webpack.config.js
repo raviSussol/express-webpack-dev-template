@@ -1,12 +1,12 @@
 /* global __dirname */
-const path = require('path');
+import path from 'path';
 // const ContextReplacementPlugin = require('webpack').ContextReplacementPlugin;
 
 const env = process.env.NODE_ENV || 'development';
 const isProd = env === 'production';
 
 module.exports = {
-  entry: path.join(__dirname, 'src/js/index.js'), // our app entry
+  entry: path.join(__dirname, '../src/js/index.js'), // our app entry
   // https://github.com/airbnb/enzyme/blob/master/docs/guides/webpack.md#react-15-compatibility
   externals: {
     'react/addons': true,
@@ -46,16 +46,18 @@ module.exports = {
     }],
   },
   output: {
-    path: path.join(__dirname, 'build'),
+    path: path.join(__dirname, '../build'),
     filename: 'bundle.js',
     publicPath: '',
   },
   stats: {
     warnings: false,
   },
-  devServer: {
-    port: process.env.WEBPACK_SERVER_PORT || 8080,
-    publicPath: '', // match the output `publicPath`
-  },
+  mode: env,
+  // devServer: {
+  //   port: process.env.WEBPACK_SERVER_PORT || 8080,
+  //   contentBase: path.join(__dirname, 'build'),
+  //   publicPath: '', // match the output `publicPath`
+  // },
   devtool: isProd ? 'cheap-module-source-map' : 'eval',
 };
